@@ -2,12 +2,13 @@ from typing import Any, List, Optional
 
 class Node:
     def __init__(self, data: Any = None, next: Optional['Node'] = None, prev: Optional['Node'] = None):
-        self.data: any = data
+        self.data: Any = data
         self.next: Optional['Node'] = next
         self.prev: Optional['Node'] = prev
 
 class BiLinkedList:
     def __init__(self):
+        # Using dummy nodes for head and tail to simplify edge cases
         self.head: Optional[Node] = Node()
         self.tail: Optional[Node] = Node()
         self.head.next = self.tail
